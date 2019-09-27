@@ -26,21 +26,21 @@
 <p>
     <a href="/customers">Back to customer list</a>
 </p>
-<form method="post">
+<form method="post" action="${pageContext.request.contextPath}/create-customer">
     <fieldset>
         <legend>Customer information</legend>
         <table>
             <tr>
                 <td>Name: </td>
-                <td><input type="text" name="name" id="name"></td>
+                <td><input type="text" name="name" id="name" value="${requestScope["customer"].getName()}"></td>
             </tr>
             <tr>
                 <td>Email: </td>
-                <td><input type="text" name="email" id="email"></td>
+                <td><input type="text" name="email" id="email" value="${requestScope["customer"].getEmail()}"></td>
             </tr>
             <tr>
                 <td>Address: </td>
-                <td><input type="text" name="address" id="address"></td>
+                <td><input type="text" name="address" id="address" value="${requestScope["customer"].getAddress()}"></td>
             </tr>
             <tr>
                 <td></td>

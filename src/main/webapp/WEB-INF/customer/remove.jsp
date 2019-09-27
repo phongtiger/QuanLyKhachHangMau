@@ -15,7 +15,7 @@
 <p>
     <a href="/customers">Back to customer list</a>
 </p>
-<form method="post">
+<form method="post" action="realDelete/${requestScope["customer"].getId()}">
     <h3>Are you sure?</h3>
     <fieldset>
         <legend>Customer information</legend>
@@ -38,5 +38,6 @@
             </tr>
         </table>
     </fieldset>
+    </form>
 </body>
 </html>
