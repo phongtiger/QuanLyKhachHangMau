@@ -14,7 +14,7 @@
 <body>
 <h1>Customers</h1>
 <p>
-    <a href="/create">Create new customer</a>
+    <a href="${pageContext.request.contextPath}/create">Create new customer</a>
 </p>
 <table border="1">
     <tr>
@@ -30,7 +30,7 @@
             <td>${customer.getEmail()}</td>
             <td>${customer.getAddress()}</td>
             <td><a href="/edit/${customer.getId()}">edit</a></td>
-            <td><a href="/delete/${customer.getId()}">delete</a></td>
+            <td><a href="${pageContext.request.contextPath}/delete/${customer.getId()}">delete</a></td>
         </tr>
     </c:forEach>
 </table>
